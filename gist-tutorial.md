@@ -1,10 +1,12 @@
-# Title (replace with your title)
+# Regex Tutorial by Brett Gillund
 
 Introductory paragraph (replace this with your text)
 
 ## Summary
 
 Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+
+This tutorial is to be used as a reference 
 
 ## Table of Contents
 
