@@ -37,24 +37,24 @@ In order to enable regular expressions in VS code you need to press CTRL f or Co
 
 Anchors matche the position of a character within the string itself.
 - ^ = beginning of a line.
-ex: ^\w looks for the first WORD char in each line.
+    - ex: ^\w looks for the first WORD char in each line.
 - $ = end of a line.
-ex: \w+$ looks for the last WORD char in each line.
+    - ex: \w+$ looks for the last WORD char in each line.
 - \b = word boundry. 
-ex: \b\w{4}\b looks for each four letter word within a string.
+    - ex: \b\w{4}\b looks for each four letter word within a string.
 
 ### Quantifiers * + ? { }
 
 quantifiers are meta characters that modify the previous character in the regular expression.
-- * = 0 or more.
-- + = 1 or more.
-- ? = 0 or 1.
-ex: colou?rs? - find all text that includes either color, colour, or colours - the u and s are both optional as they were preceded by a ? optional.
-- {min,max}
-- {n}
-ex: \w{6} find all six letter words in the text.
+- "*" = 0 or more.
+- "+" = 1 or more.
+- "?" = 0 or 1.
+    -   ex: colou?rs? - find all text that includes either color, colour, or colours - the u and s are both optional as they were preceded by a ? optional.
+- "{min,max}"
+- "{n}"
+    - ex: \w{6} find all six letter words in the text.
 
-### Grouping Constructs ()
+### Grouping Constructs ( )
 
 Grouping Constructs means using parentheses to seperate different groups within a regular expression. This data can be modified to the users parameters.
 ex: Lets say that we want to change 612-888-8888 to 612-XXX-XXXX. We can use a regex with grouping constructs to group and modify those sections. (\d{3})-\d{3}-\d{4} looks for a group of three digets, a dash, three digets, a dash, and then four digets. We can the use the Replace bar found underneath the REGEX bar to replace the digets we want with Xs using the following code: $1-XXX-XXXX. The $1 targets the group within the parentheses.
@@ -62,9 +62,9 @@ ex: Lets say that we want to change 612-888-8888 to 612-XXX-XXXX. We can use a r
 Note that the character $ represents GROUP, and that $0 is everything.
 
 
-### Bracket Expressions []
+### Bracket Expressions [ ]
 
-Bracket Expressions are characters that appear between square brackets [].
+Bracket Expressions are characters that appear between square brackets [ ].
 - Note that any character found within a character class becomes a literal character.
 ex: [.] the period that normally is equal to all characters is now a literal character equal to ".".
 
@@ -78,8 +78,6 @@ ex: searching for [-] searches for a literal dash. Searching for [a-z] searches 
 ex: Searching for [a-z] searches for characters from a through z. Seaching for [^a-z] searches for any character that is NOT a through z.
 
 ### Character Classes
-
-- The the above example we are looking for a LITERAL character.
 
 Literal character - match this exact character.
 
@@ -98,7 +96,7 @@ ex:
 ### The OR Operator ( | )
 
 The OR Operator also known as alternation uses parentheses and a pipe symbol to look for one of several potential characters.
-ex: when searching for com or net or gov you can use (com|net|gov) which will search for any instance of these characters.
+- ex: when searching for com or net or gov you can use (com|net|gov) which will search for any instance of these characters.
 
 ### Flags
 
@@ -112,8 +110,8 @@ Flags are used in regular expresssions to affect search paramters. There are six
 
 ### Character Escapes
 
-Character Esacapes are used to yse any of the special characters literally. To use a character escape use a backslash \.
-ex: if a user needs to search for a * they wi;; need to use put a backslash in front of it \*.
+Character Esacapes are used to yse any of the special characters literally. To use a character escape use a backslash \ .
+ex: if a user needs to search for a * they wi;; need to use put a backslash in front of it \ *.
 
 ## Author
 
